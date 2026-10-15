@@ -18,10 +18,10 @@ body { align-items: start; overscroll-behavior:none; }
 .work-history__row { padding:24px 0; cursor:pointer; list-style:none; }
 .work-history__row::-webkit-details-marker { display:none; }
 .work-history__row:focus-visible { outline:2px solid #777; outline-offset:4px; border-radius:4px; }
-.work-history__company { margin:0; font-size:26px; font-weight:500; line-height:1.25; letter-spacing:-.025em; }
+.work-history__company { margin:0; font-size:24px; font-weight:500; line-height:1.25; letter-spacing:-.025em; }
 .work-history__role, .work-history__description { font-size:18px; line-height:1.5; }
-.work-history__description { color:#777; }
-.work-history__period { display:block; margin-top:4px; color:#999; font-size:16px; }
+.work-history__description { color:#3b3b3b; }
+.work-history__period { display:block; margin-top:4px; color:#999; font-size:18px; }
 .work-history__arrow { width:20px; height:20px; margin-top:4px; fill:none; stroke:#777; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
 .work-history__item[open] .work-history__arrow { transform:rotate(180deg); }
 .work-history__expanded { padding-bottom:24px; }

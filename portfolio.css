@@ -1,0 +1,104 @@
+/* A continuous portfolio page; navigation retains its existing design. */
+html { scroll-behavior: smooth; overscroll-behavior:none; }
+body { align-items: start; overscroll-behavior:none; }
+.sidebar { position: sticky; top: 24px; max-height: calc(100svh - 48px); overflow-y: auto; }
+.portfolio-content { display: flex; flex-direction: column; padding: 12px 48px 40px; min-width: 0; }
+.portfolio-section { padding: 44px 0 64px; scroll-margin-top: 32px; }
+.portfolio-section:first-child { padding-top: 16px; }
+.portfolio-section h2 { margin: 0; font-size: clamp(32px,3.2vw,40px); font-weight: 500; line-height: 1.15; letter-spacing: -.035em; }
+.section-description { max-width: none; margin: 12px 0 0; color: #777; font-size: clamp(19px,1.9vw,24px); font-weight: 500; line-height: 1.5; }
+.about-intro__avatar { display:block; width:140px; height:140px; margin-bottom:32px; border-radius:18%; overflow:hidden; }
+.about-intro__avatar img { display:block; width:100%; height:100%; object-fit:cover; object-position:center; }
+.about-intro h2, .about-intro .section-description { max-width:850px; font-size:clamp(24px,2.5vw,32px); font-weight:500; line-height:1.2; letter-spacing:-.035em; }
+.about-intro .section-description { margin-top:0; color:#999; }
+@media(max-width:620px) { .about-intro__avatar { width:104px; height:104px; margin-bottom:24px; } }
+.portfolio-section--empty { min-height: 220px; }
+.work-history { margin-top:32px; }
+.work-history__row, .work-history__expanded { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.45fr) minmax(0,2.2fr) 20px; gap:24px; }
+.work-history__row { padding:24px 0; cursor:pointer; list-style:none; }
+.work-history__row::-webkit-details-marker { display:none; }
+.work-history__row:focus-visible { outline:2px solid #777; outline-offset:4px; border-radius:4px; }
+.work-history__company { margin:0; font-size:26px; font-weight:500; line-height:1.25; letter-spacing:-.025em; }
+.work-history__role, .work-history__description { font-size:18px; line-height:1.5; }
+.work-history__description { color:#777; }
+.work-history__period { display:block; margin-top:4px; color:#999; font-size:16px; }
+.work-history__arrow { width:20px; height:20px; margin-top:4px; fill:none; stroke:#777; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
+.work-history__item[open] .work-history__arrow { transform:rotate(180deg); }
+.work-history__expanded { padding-bottom:24px; }
+.work-history__expanded p { grid-column:3; margin:0; max-width:none; font-size:18px; line-height:1.5; color:#777; }
+@media(max-width:1100px) {
+  .work-history__row, .work-history__expanded { grid-template-columns:minmax(0,1fr) minmax(0,2fr) 20px; }
+  .work-history__description, .work-history__expanded p { grid-column:2; }
+  .work-history__arrow { grid-column:3; grid-row:1; }
+}
+@media(max-width:620px) {
+  .work-history { margin-top:24px; }
+  .work-history__row, .work-history__expanded { grid-template-columns:minmax(0,1fr) 20px; gap:12px; }
+  .work-history__row { padding:20px 0; }
+  .work-history__role, .work-history__description, .work-history__expanded p { grid-column:1; }
+  .work-history__arrow { grid-column:2; }
+  .work-history__company { font-size:24px; }
+}
+@media(min-width:1600px) { .sidebar { top:32px; max-height:calc(100svh - 64px); } }
+@media(max-width:900px) { .sidebar { top:16px; max-height:calc(100svh - 32px); } .portfolio-content { padding: 8px 24px 32px; } }
+@media(max-width:620px) { .sidebar { position:static; max-height:none; overflow:visible; } .portfolio-content { padding: 16px 12px 32px; } .portfolio-section { padding:32px 0 40px; scroll-margin-top:20px; } .portfolio-section--empty { min-height:160px; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+
+.concept-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin-top:32px; }
+.concept-gallery .case-card { margin:0; position:relative; overflow:hidden; border-radius:var(--surface-radius); background:#eee; }
+.concept-gallery img { display:block; width:100%; height:auto; }
+.concept-gallery .case-chip { position:absolute; top:14px; left:14px; max-width:calc(100% - 28px); padding:4px 10px; border-radius:10px; background:rgba(228,228,228,.92); color:#444; font-size:15px; line-height:20px; opacity:0; transform:translateY(4px); transition:opacity 160ms ease,transform 160ms ease; }
+.concept-gallery .case-card:hover .case-chip { opacity:1; transform:translateY(0); }
+@media(max-width:680px) { .concept-gallery { grid-template-columns:1fr; margin-top:24px; } }
+@media(hover:none) { .concept-gallery .case-chip { opacity:1; transform:none; } }
+
+.social-previews { display:grid; gap:32px; margin-top:32px; }
+.social-preview { margin:0; min-width:0; }
+.social-preview figcaption { margin-bottom:12px; font-size:20px; font-weight:500; }
+.social-preview img { display:block; width:100%; height:auto; border-radius:var(--surface-radius); border:1px solid #e5e5e5; }
+@media(max-width:620px) { .social-previews { gap:24px; } .social-preview figcaption { font-size:18px; } }
+
+
+#socials .social-preview > figcaption { color: #777777; }
+
+.project-list { display:flex; flex-direction:column; gap:64px; margin-top:32px; }
+.portfolio-project { scroll-margin-top:32px; min-width:0; }
+.project-cover { display:block; width:100%; height:auto; border-radius:var(--surface-radius); }
+.portfolio-project h3 { margin:20px 0 0; font-size:18px; font-weight:500; line-height:28px; }
+.project-cover-placeholder { aspect-ratio:900 / 532; display:grid; place-items:center; border-radius:var(--surface-radius); background:#ededed; color:#777; font-size:18px; }
+@media(max-width:680px) { .project-list { gap:36px; margin-top:24px; } .portfolio-project h3 { margin-top:16px; } }
+
+.project-meta { display:flex; align-items:flex-start; justify-content:space-between; gap:24px; margin-top:20px; }
+.portfolio-project .project-meta h3 { display:flex; align-items:flex-start; gap:8px; min-width:0; margin:0; font-size:18px; line-height:28px; font-weight:500; }
+.project-meta h3 svg { width:20px; height:20px; flex:0 0 20px; margin-top:4px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.project-tags { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:8px; flex-shrink:0; }
+.project-tags span { display:inline-flex; align-items:center; justify-content:center; min-height:28px; padding:4px 10px; border-radius:12px; background:#e4e4e4; color:#5e5e5e; font-size:15px; line-height:20px; font-weight:500; white-space:nowrap; }
+@media(max-width:1180px) { .project-meta { flex-wrap:wrap; gap:12px; } .project-tags { justify-content:flex-start; } }
+@media(max-width:680px) { .project-meta { margin-top:16px; } }
+
+.project-cover-link { display:block; border-radius:var(--surface-radius); text-decoration:none; color:inherit; }
+.project-title-link { display:flex; align-items:flex-start; gap:8px; text-decoration:none; color:inherit; transition:color 160ms ease; }
+.project-title-link:hover { color:#3b9aff; }
+.project-cover-link:hover { opacity:.94; }
+.project-cover-link:focus-visible, .project-title-link:focus-visible { outline:2px solid #3b9aff; outline-offset:4px; }
+
+/* Keep navigation geometry stable as the current section changes. */
+.sidebar .nav-links--plain a,
+.sidebar .nav-links--plain a[aria-current="page"],
+.sidebar .nav-links--plain a:active { transform:none; transition:color 160ms ease; }
+.sidebar .nav-links--plain a::before,
+.sidebar .nav-links--plain a[aria-current="page"]::before { width:16px; flex:0 0 16px; margin-right:8px; transform:none; transition:none; }
+.sidebar .nav-links--plain a::before { opacity:0; }
+.sidebar .nav-links--plain a[aria-current="page"]::before { opacity:1; }
+@media(min-width:621px) {
+  .sidebar { position:fixed; left:24px; top:24px; width:316px; overflow:visible; max-height:none; z-index:10; }
+  .sidebar > .card { flex-shrink:0; }
+  .portfolio-content { grid-column:2; }
+}
+@media(min-width:621px) and (max-height:540px) {
+  .sidebar { max-height:calc(100svh - 48px); }
+  .sidebar .nav-links { flex-shrink:1; min-height:0; overflow-y:auto; overscroll-behavior:contain; }
+}
+@media(min-width:621px) and (max-width:1180px) { .sidebar { width:280px; } }
+@media(min-width:621px) and (max-width:900px) { .sidebar { left:16px; top:16px; } }
+@media(min-width:1600px) { .sidebar { left:32px; top:32px; } }

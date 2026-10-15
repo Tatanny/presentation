@@ -1,0 +1,23 @@
+/* One centered frame for the home page and both case studies. */
+:root { --layout-max:1400px; --layout-padding:24px; }
+.portfolio-home, .case-shell {
+  width:100%;
+  max-width:var(--layout-max);
+  margin-inline:auto;
+  padding:var(--layout-padding);
+  gap:20px;
+}
+@media(min-width:621px) {
+  .sidebar {
+    left:calc((100% - min(100%, var(--layout-max))) / 2 + var(--layout-padding));
+    top:var(--layout-padding);
+  }
+}
+@media(max-width:900px) {
+  :root { --layout-padding:16px; }
+  .portfolio-home, .case-shell { gap:14px; }
+}
+@media(max-width:620px) {
+  :root { --layout-padding:12px; }
+  .portfolio-home, .case-shell { gap:12px; }
+}

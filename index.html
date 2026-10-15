@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Татьяна Шерстнева · Портфолио</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="sidebar.css">
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="stylesheet" href="layout.css">
+</head>
+<body class="portfolio-home">
+  <aside class="sidebar" aria-label="Информация о дизайнере">
+        <section class="profile card">
+          <div class="profile__head">
+            <a class="profile__avatar-wrap" href="#about" data-clean-href="./" data-home-link aria-label="На главную">
+              <img class="profile__avatar profile__avatar--base" src="assets/avatar.png" width="128" height="160" alt="Tanya Sherstneva" />
+              <img class="profile__avatar profile__avatar--hover" src="assets/avatar-hover.png" width="128" height="160" alt="" aria-hidden="true" />
+            </a>
+            <div>
+              <h1><a class="profile__name-link" href="#about" data-clean-href="./" data-home-link aria-label="На главную">Tanya Sherstneva</a></h1>
+              <p>Product designer</p>
+            </div>
+          </div>
+
+        </section>
+
+        <nav class="card nav-links nav-links--plain" aria-label="Разделы портфолио">
+          <a href="#about">Обо мне</a>
+          <a href="#experience">Места работы</a>
+        </nav>
+
+        <nav class="card nav-links nav-links--plain" aria-label="Дополнительные разделы">
+          <a href="#additional-about">FinTech приложение</a>
+          <a href="#additional-experience">Центр уведомлений</a>
+        </nav>
+
+        <nav class="card nav-links nav-links--plain" aria-label="Концепты и социальные сети">
+          <a href="#concepts">Концепты</a>
+          <a href="#socials">Социальные сети</a>
+        </nav>
+
+
+
+
+      </aside>
+  <main class="portfolio-content">
+    <section class="portfolio-section about-intro" id="about" aria-labelledby="about-title">
+      <div class="about-intro__avatar"><img src="assets/about-portrait.jpg" width="140" height="140" alt="Таня Шерстнева"></div>
+      <h2 id="about-title">Привет! Я продуктовый дизайнер с 3-летним опытом работы в&nbsp;SaaS, Fintech и Edtech.</h2>
+      <p class="section-description">Проектирую mobile и web-интерфейсы для B2B и B2C-продуктов, работаю со сложными пользовательскими сценариями, состояниями и ограничениями продукта.</p>
+    </section>
+    <section class="portfolio-section" id="experience" aria-labelledby="experience-title">
+      <h2 id="experience-title">Места работы</h2>
+      <div class="work-history">
+        <details class="work-history__item">
+          <summary class="work-history__row">
+            <span class="work-history__company">InternetUrok</span>
+            <span class="work-history__role">Продуктовый дизайнер<span class="work-history__period">нояб. 2025 → апр. 2026</span></span>
+            <span class="work-history__description">EdTech-платформа для&nbsp;школьного онлайн-образования.</span>
+            <svg class="work-history__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="work-history__expanded"><p>Проектировала внутренние CRM и&nbsp;административные сервисы для&nbsp;работы с&nbsp;учениками, договорами и&nbsp;оплатами. Адаптировала сценарий «каталог → корзина → оплата» для&nbsp;разных устройств и&nbsp;поддерживала дизайн-систему.</p></div>
+        </details>
+        <details class="work-history__item">
+          <summary class="work-history__row">
+            <span class="work-history__company">Optimacros</span>
+            <span class="work-history__role">Продуктовый дизайнер<span class="work-history__period">дек. 2022 → июнь 2025</span></span>
+            <span class="work-history__description">SaaS-платформа для&nbsp;планирования, бюджетирования и&nbsp;финансового моделирования.</span>
+            <svg class="work-history__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="work-history__expanded"><p>Проектировала сложные B2B-интерфейсы, управление бизнес-ролями и&nbsp;центр уведомлений. Исследовала пользовательские сценарии, создала CJM и&nbsp;UI-kit, сопровождала реализацию с&nbsp;командой разработки.</p></div>
+        </details>
+        <details class="work-history__item">
+          <summary class="work-history__row">
+            <span class="work-history__company">Inchcape</span>
+            <span class="work-history__role">Специалист по&nbsp;финансовому планированию и&nbsp;анализу<span class="work-history__period">окт. 2020 → авг. 2022</span></span>
+            <span class="work-history__description">Международная компания в&nbsp;сфере дистрибуции автомобилей премиум- и&nbsp;люкс-сегмента.</span>
+            <svg class="work-history__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="work-history__expanded"><p>Готовила финансовую отчётность, бюджеты и&nbsp;прогнозы. Описала процессы отдела в&nbsp;технических инструкциях. Участвовала в&nbsp;переходе на&nbsp;новый модуль SAP BPC: выявляла ошибки и&nbsp;работала с&nbsp;командой разработки над&nbsp;их исправлением.</p></div>
+        </details>
+        <details class="work-history__item">
+          <summary class="work-history__row">
+            <span class="work-history__company">Ceetrus / NHOOD</span>
+            <span class="work-history__role">Младший финансовый аналитик<span class="work-history__period">февр. 2018 → окт. 2020</span></span>
+            <span class="work-history__description">Компания в&nbsp;сфере управления и&nbsp;развития недвижимости.</span>
+            <svg class="work-history__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="work-history__expanded"><p>Анализировала и&nbsp;планировала переменные доходы, объясняла отклонения от&nbsp;бюджета. Участвовала в&nbsp;автоматизации финансовой аналитики в&nbsp;1С: составляла технические задания, тестировала функциональность и&nbsp;взаимодействовала с&nbsp;разработчиками.</p></div>
+        </details>
+      </div>
+    </section>
+    <section class="portfolio-section" id="cases" aria-labelledby="cases-title">
+      <h2 id="cases-title">Кейсы</h2>
+      <div class="project-list">
+        <article class="portfolio-project" id="additional-about" aria-labelledby="additional-about-title">
+          <a class="project-cover-link" href="projects/flowly/index.html" aria-label="Открыть проект: MVP приложения для управления личными финансами"><img class="project-cover" src="assets/cases/flowly-cover-new.png" width="2988" height="1770" loading="lazy" alt="Flowly: главная страница и список финансовых операций"></a>
+          <div class="project-meta"><h3 id="additional-about-title"><a class="project-title-link" href="projects/flowly/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg><span>MVP приложения для управления личными финансами</span></a></h3><div class="project-tags" aria-label="Теги проекта"><span>2026</span><span>Mobile</span><span>iOS</span><span>FinTech</span></div></div>
+        </article>
+        <article class="portfolio-project" id="additional-experience" aria-labelledby="additional-experience-title">
+          <a class="project-cover-link" href="projects/notifications/index.html" aria-label="Открыть проект: Система уведомлений для B2B-платформы"><img class="project-cover" src="assets/cases/1notifications-cover.jpg" width="1800" height="1066" loading="lazy" alt="Центр уведомлений в интерфейсе Optimacros"></a>
+          <div class="project-meta"><h3 id="additional-experience-title"><a class="project-title-link" href="projects/notifications/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg><span>Система уведомлений для B2B-платформы</span></a></h3><div class="project-tags" aria-label="Теги проекта"><span>2024</span><span>Web</span><span>SaaS</span><span>B2B</span></div></div>
+        </article>
+      </div>
+    </section>
+    <section class="portfolio-section" id="concepts" aria-labelledby="concepts-title">
+      <h2 id="concepts-title">Концепты</h2>
+      <div class="concept-gallery">
+        <figure class="case-card case-card--tall"><img src="assets/optimized/concept-08-photo-editor.png" width="988" height="1062" loading="lazy" alt="Концепт мобильного фоторедактора" /><figcaption class="case-chip">Photo Editor</figcaption></figure>
+        <figure class="case-card case-card--short"><img src="assets/optimized/concept-02-messaging-app.jpg" width="1023" height="1100" loading="lazy" alt="Messenger" /><figcaption class="case-chip">Messenger</figcaption></figure>
+        <figure class="case-card case-card--tall"><img src="assets/optimized/concept-06-task-manager-app.jpg" width="1023" height="1100" loading="lazy" alt="Task Manager" /><figcaption class="case-chip">Task Manager</figcaption></figure>
+        <figure class="case-card case-card--tall"><img src="assets/optimized/concept-04-streaming-app.jpg" width="1023" height="1100" loading="lazy" alt="Online Cinema" /><figcaption class="case-chip">Online Cinema</figcaption></figure>
+        <figure class="case-card case-card--tall"><img src="assets/optimized/concept-05-android-news-app.jpg" width="1023" height="1100" loading="lazy" alt="Android News Portal" /><figcaption class="case-chip">Android News Portal</figcaption></figure>
+        <figure class="case-card case-card--tall"><img src="assets/optimized/concept-07-task-manager-app.jpg" width="1023" height="1100" loading="lazy" alt="Task Manager" /><figcaption class="case-chip">Task Manager</figcaption></figure>
+        <figure class="case-card case-card--tall"><img src="assets/optimized/concept-03-messaging-app.jpg" width="1023" height="1100" loading="lazy" alt="Messenger" /><figcaption class="case-chip">Messenger</figcaption></figure>
+        <figure class="case-card case-card--short"><img src="assets/optimized/concept-01-reading-app.jpg" width="1023" height="1100" loading="lazy" alt="Reader" /><figcaption class="case-chip">Reader</figcaption></figure>
+      </div>
+    </section>
+    <section class="portfolio-section" id="socials" aria-labelledby="socials-title">
+      <h2 id="socials-title">Социальные сети</h2>
+      <p class="section-description">Делюсь своими концептами интерфейсов в LinkedIn, Dribbble и Pinterest.</p>
+      <div class="social-previews">
+        <figure class="social-preview"><figcaption>LinkedIn</figcaption><img src="assets/socials/linkedin.png" width="2312" height="1554" loading="lazy" alt="Мои публикации и концепты в LinkedIn"></figure>
+        <figure class="social-preview"><figcaption>Dribbble</figcaption><img src="assets/socials/dribbble.png" width="2912" height="1554" loading="lazy" alt="Мои публикации и концепты в Dribbble"></figure>
+        <figure class="social-preview"><figcaption>Pinterest</figcaption><img src="assets/socials/pinterest.png" width="2964" height="1582" loading="lazy" alt="Мои публикации и концепты в Pinterest"></figure>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
